@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'contact_item.dart';
 
 void main() {
@@ -17,7 +18,9 @@ class _MyBusinessCardAppState extends State<MyBusinessCardApp> {
 
   void _toggleTheme() {
     setState(() {
-      _themeMode = _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+      _themeMode = _themeMode == ThemeMode.light
+          ? ThemeMode.dark
+          : ThemeMode.light;
     });
   }
 
@@ -77,29 +80,24 @@ class BusinessCardScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              
+
               Text(
                 'Валерій Антипкін',
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+                style: Theme.of(context).textTheme.headlineMedium
+                    ?.copyWith(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               Text(
                 'Software Engineer',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  color: Theme.of(context).colorScheme.secondary,
-                ),
+                style: Theme.of(context).textTheme.titleMedium
+                    ?.copyWith(color: Theme.of(context).colorScheme.secondary),
               ),
-              
+
               const SizedBox(height: 24),
               const Divider(indent: 40, endIndent: 40),
               const SizedBox(height: 16),
 
-              const ContactItem(
-                icon: Icons.phone,
-                text: '+380 (99) 111-11-11',
-              ),
+              const ContactItem(icon: Icons.phone, text: '+380 (99) 111-11-11'),
               const ContactItem(
                 icon: Icons.email,
                 text: 'v.antupkin@istu.edu.ua',
@@ -112,9 +110,9 @@ class BusinessCardScreen extends StatelessWidget {
                 icon: Icons.link,
                 text: 'github.com/antupkin3459', // Виправлений рядок
               ),
-              
+
               const SizedBox(height: 24),
-              
+
               FilledButton.icon(
                 onPressed: onThemeToggle,
                 icon: const Icon(Icons.palette),

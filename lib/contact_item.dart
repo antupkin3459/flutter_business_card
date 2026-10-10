@@ -4,11 +4,7 @@ class ContactItem extends StatelessWidget {
   final IconData icon;
   final String text;
 
-  const ContactItem({
-    super.key,
-    required this.icon,
-    required this.text,
-  });
+  const ContactItem({super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
